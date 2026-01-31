@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color BOPP Tape | NKB Packaging Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#fff;color:#111;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+
+.navbar{
+  position:fixed;top:0;left:0;width:100%;
+  padding:15px 40px;
+  display:flex;justify-content:flex-end;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter:blur(8px);
+  z-index:1000;
+}
+.nav-items{display:flex;gap:25px;}
+.nav-items a{color:#fff;font-weight:500;display:flex;align-items:center;transition:.3s;}
+.nav-items a:hover{color:#ff6b6b;}
+.nav-items i{margin-right:6px;}
+
+.header-banner{
+  background:url('color-banner.jpg') center/cover no-repeat;
+  padding:130px 20px 90px;
+  text-align:center;
+  position:relative;
+}
+.header-banner::after{
+  content:"";position:absolute;inset:0;background:rgba(0,0,0,.25);
+}
+.header-banner h1{
+  position:relative;
+  font-size:3rem;
+  color:#ff6b6b;
+  font-weight:700;
+  opacity:0;transform:translateY(60px);
+  transition:1.2s;
+}
+
+.section{
+  max-width:1200px;
+  margin:70px auto;
+  padding:0 20px;
+}
+
+.about-box{
+  background:#fafafa;
+  border-radius:28px;
+  padding:60px;
+  display:flex;
+  gap:50px;
+  align-items:center;
+  flex-wrap:wrap;
+  box-shadow:0 25px 60px rgba(0,0,0,0.05);
+  opacity:0;transform:translateY(60px);
+  transition:1.2s;
+}
+.about-text{flex:1 1 60%;}
+.about-image{flex:1 1 35%;text-align:right;}
+.about-image img{max-width:380px;border-radius:18px;}
+
+h2{font-size:2.05rem;margin-bottom:22px;}
+h2::after{
+  content:'';
+  width:60px;height:3px;
+  background:#ff6b6b;
+  display:block;margin-top:8px;border-radius:2px;
+}
+p{line-height:1.75;color:#333;margin-bottom:18px;}
+
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:28px;
+  margin-top:35px;
+}
+.card{
+  background:#fff;
+  padding:26px 24px;
+  border-radius:22px;
+  box-shadow:0 12px 28px rgba(0,0,0,.08);
+  transition:.35s ease;
+  opacity:0;transform:translateY(60px);
+}
+.card i{font-size:1.9rem;color:#ff6b6b;margin-bottom:15px;}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 28px 55px rgba(0,0,0,.12);
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+  margin-top:40px;
+}
+.info-box{
+  background:#fafafa;
+  padding:35px;
+  border-radius:24px;
+}
+.info-box h4{margin-bottom:12px;font-size:1.1rem;color:#111;}
+.info-box ul{padding-left:18px;}
+.info-box li{margin-bottom:10px;color:#444;font-size:.95rem;}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:26px;
+  margin-top:40px;
+}
+.product-card{
+  background:#fff;
+  border-radius:20px;
+  padding:14px;
+  border:1px solid #eee;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  transition:.35s;
+  opacity:0;transform:translateY(60px);
+}
+.product-card img{
+  width:100%;height:145px;
+  object-fit:cover;border-radius:14px;
+  margin-bottom:10px;
+}
+.product-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 22px 40px rgba(0,0,0,.15);
+}
+
+.footer{
+  background:#111;color:#ddd;padding:45px 20px;
+}
+.footer-container{
+  max-width:1200px;margin:auto;
+  display:flex;flex-wrap:wrap;gap:35px;
+}
+.footer-column{flex:1;min-width:220px;}
+.footer-column h4{color:#ff6b6b;margin-bottom:15px;}
+.footer-column a{display:block;color:#ddd;margin-bottom:6px;}
+.footer-column a:hover{color:#ff6b6b;}
+
+.reveal.active{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){
+  .about-box{padding:40px;}
+  .about-image{text-align:center;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="nav-items">
+    <a href="#"><i class="fas fa-home"></i>Home</a>
+    <a href="#"><i class="fas fa-info-circle"></i>About</a>
+    <a href="#"><i class="fas fa-box"></i>Products</a>
+    <a href="#"><i class="fas fa-phone"></i>Contact</a>
+  </div>
+</div>
+
+<div class="header-banner">
+  <h1 class="reveal">COLOR BOPP SELF ADHESIVE TAPES</h1>
+</div>
+
+<section class="section">
+  <div class="about-box reveal">
+    <div class="about-text">
+      <h2>About Color BOPP Tape</h2>
+      <p>Color BOPP Self Adhesive Tapes are designed for identification, branding and decorative packaging.</p>
+      <p>These tapes provide excellent adhesion strength along with high visibility colors.</p>
+    </div>
+    <div class="about-image">
+      <img src="color-bopp.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Advantages</h2>
+  <div class="cards-grid">
+    <div class="card reveal"><i class="fas fa-palette"></i><h4>Multiple Colors</h4><p>Wide range of vibrant shades.</p></div>
+    <div class="card reveal"><i class="fas fa-box"></i><h4>Strong Adhesion</h4><p>Secure carton sealing.</p></div>
+    <div class="card reveal"><i class="fas fa-tag"></i><h4>Easy Identification</h4><p>Helps in sorting & branding.</p></div>
+    <div class="card reveal"><i class="fas fa-shield-alt"></i><h4>Durable Finish</h4><p>Resistant to dust and moisture.</p></div>
+  </div>
+</section>
+
+<!-- USES -->
+<section class="section">
+  <h2>Applications & Uses</h2>
+  <div class="cards-grid">
+    <div class="card reveal"><i class="fas fa-warehouse"></i><h4>Warehouse Identification</h4><p>Color coding cartons for easy segregation.</p></div>
+    <div class="card reveal"><i class="fas fa-truck-moving"></i><h4>Logistics & Transport</h4><p>Helps identify shipments during transit.</p></div>
+    <div class="card reveal"><i class="fas fa-industry"></i><h4>Industrial Packaging</h4><p>Used in factories and production units.</p></div>
+    <div class="card reveal"><i class="fas fa-tags"></i><h4>Branding</h4><p>Ideal for promotional and branded packaging.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Why Choose Our Color BOPP Tape?</h2>
+  <div class="info-grid">
+    <div class="info-box"><h4>Consistent Quality</h4><ul><li>Uniform thickness</li><li>Stable coating</li><li>Long shelf life</li></ul></div>
+    <div class="info-box"><h4>Industrial Grade</h4><ul><li>High tensile strength</li><li>Heavy carton support</li><li>Reliable sealing</li></ul></div>
+    <div class="info-box"><h4>Custom Options</h4><ul><li>Multiple sizes</li><li>Custom colors</li><li>Bulk supply</li></ul></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Technical Specifications</h2>
+  <div class="info-grid">
+    <div class="info-box"><strong>Film:</strong> BOPP</div>
+    <div class="info-box"><strong>Adhesive:</strong> Acrylic Based</div>
+    <div class="info-box"><strong>Thickness:</strong> 40–65 Micron</div>
+    <div class="info-box"><strong>Colors:</strong> Red, Blue, Green, Yellow, Black</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Our Product Range</h2>
+  <div class="product-grid">
+    <a class="product-card reveal"><img src="img5.jpg"><p>Transparent BOPP Tape</p></a>
+    <a class="product-card reveal"><img src="brown.jpg"><p>Brown BOPP Tape</p></a>
+    <a class="product-card reveal"><img src="color-bopp.jpg"><p>Color BOPP Tape</p></a>
+    <a class="product-card reveal"><img src="img4.jpg"><p>Masking Tape</p></a>
+    <a class="product-card reveal"><img src="img6.jpg"><p>Stretch Film</p></a>
+    <a class="product-card reveal"><img src="foamhead.jpg"><p>EPE Foam Rolls</p></a>
+    <a class="product-card reveal"><img src="esdbg.jpg"><p>ESD Bubble Pouches</p></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p>Email: rajankoul@nkbpackaging.com</p>
+      <p>Phone: +91 9971282775</p>
+      <p>Phone: +91 9560058646</p>
+    </div>
+    <div class="footer-column">
+      <h4>Our Products</h4>
+      <a>Transparent BOPP Tape</a>
+      <a>Brown BOPP Tape</a>
+      <a>Color BOPP Tape</a>
+      <a>Masking Tape</a>
+      <a>Stretch Film</a>
+      <a>EPE Foam Rolls</a>
+    </div>
+    <div class="footer-column">
+      <h4>About Us</h4>
+      <p>NKB Packaging Solutions delivers premium industrial packaging materials nationwide.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const revealEls=document.querySelectorAll('.reveal');
+const revealOnScroll=()=>{
+  revealEls.forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-80){
+      el.classList.add('active');
+    }
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+window.addEventListener('load',revealOnScroll);
+</script>
+
+</body>
+</html>

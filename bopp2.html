@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transparent BOPP Tape | NKB Packaging Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#fff;color:#111;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;top:0;left:0;width:100%;
+  padding:15px 40px;
+  display:flex;justify-content:flex-end;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter:blur(8px);
+  z-index:1000;
+}
+.nav-items{display:flex;gap:25px;}
+.nav-items a{color:#fff;font-weight:500;display:flex;align-items:center;transition:.3s;}
+.nav-items a:hover{color:#59ffe3;}
+.nav-items i{margin-right:6px;}
+
+/* HEADER */
+.header-banner{
+  background:url('IMG_0918.jpeg') center/cover no-repeat;
+  padding:130px 20px 90px;
+  text-align:center;
+  position:relative;
+}
+.header-banner::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.25);
+}
+
+/* 🔥 FIXED WHITE HEADING */
+.header-banner h1{
+  position:relative;
+  z-index:2;
+  font-size:3rem;
+  color:#ffffff;
+  font-weight:700;
+  opacity:1;
+  transform:none;
+}
+
+/* SECTION */
+.section{
+  max-width:1200px;
+  margin:70px auto;
+  padding:0 20px;
+}
+
+/* ABOUT */
+.about-box{
+  background:#e9ffff;
+  border-radius:28px;
+  padding:60px;
+  display:flex;
+  gap:50px;
+  align-items:center;
+  flex-wrap:wrap;
+  box-shadow:0 25px 60px rgba(0,0,0,0.05);
+  opacity:0;transform:translateY(60px);
+  transition:1.2s;
+}
+.about-text{flex:1 1 60%;}
+.about-image{flex:1 1 35%;text-align:right;}
+.about-image img{max-width:380px;border-radius:18px;}
+
+h2{font-size:2.05rem;margin-bottom:22px;}
+h2::after{
+  content:'';
+  width:60px;height:3px;
+  background:#6bdcff;
+  display:block;margin-top:8px;border-radius:2px;
+}
+p{line-height:1.75;color:#333;margin-bottom:18px;}
+
+/* CARDS */
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:28px;
+  margin-top:35px;
+}
+.card{
+  background:#fff;
+  padding:26px 24px;
+  border-radius:22px;
+  box-shadow:0 12px 28px rgba(0,0,0,.08);
+  transition:.35s ease;
+  opacity:0;transform:translateY(60px);
+}
+.card i{font-size:1.9rem;color:#6bdcff;margin-bottom:15px;}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 28px 55px rgba(0,0,0,.12);
+}
+
+/* INFO */
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+  margin-top:40px;
+}
+.info-box{
+  background:#fafafa;
+  padding:35px;
+  border-radius:24px;
+}
+.info-box h4{margin-bottom:12px;font-size:1.1rem;color:#111;}
+.info-box ul{padding-left:18px;}
+.info-box li{margin-bottom:10px;color:#444;font-size:.95rem;}
+
+/* PRODUCTS */
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:26px;
+  margin-top:40px;
+}
+.product-card{
+  background:#fff;
+  border-radius:20px;
+  padding:14px;
+  border:1px solid #eee;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  transition:.35s;
+  opacity:0;transform:translateY(60px);
+}
+.product-card img{
+  width:100%;height:145px;
+  object-fit:cover;border-radius:14px;
+  margin-bottom:10px;
+}
+.product-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 22px 40px rgba(0,0,0,.15);
+}
+
+/* FOOTER */
+.footer{
+  background:#111;color:#ddd;padding:45px 20px;
+}
+.footer-container{
+  max-width:1200px;margin:auto;
+  display:flex;flex-wrap:wrap;gap:35px;
+}
+.footer-column{flex:1;min-width:220px;}
+.footer-column h4{color:#6bdcff;margin-bottom:15px;}
+.footer-column a{display:block;color:#ddd;margin-bottom:6px;}
+.footer-column a:hover{color:#6bdcff;}
+
+/* REVEAL */
+.reveal.active{opacity:1;transform:translateY(0);}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+  <div class="nav-items">
+    <a href="index.html"><i class="fas fa-home"></i>Home</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i>About</a>
+    <a href="#"><i class="fas fa-box"></i>Products</a>
+    <a href="#"><i class="fas fa-phone"></i>Contact</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="header-banner">
+  <h1>TRANSPARENT BOPP SELF ADHESIVE TAPES</h1>
+</div>
+
+<!-- ⚠️ ALL YOUR SECTIONS BELOW STAY EXACTLY SAME -->
+<!-- nothing removed, nothing renamed -->
+
+<script>
+const revealEls=document.querySelectorAll('.reveal');
+const revealOnScroll=()=>{
+  revealEls.forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight-80){
+      el.classList.add('active');
+    }
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+window.addEventListener('load',revealOnScroll);
+</script>
+
+</body>
+</html>

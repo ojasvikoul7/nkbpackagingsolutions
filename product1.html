@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transparent BOPP Tape | NKB Packaging Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#fff;color:#111;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+
+/* === NAVBAR === */
+.navbar{
+  position:fixed;top:0;left:0;width:100%;padding:15px 40px;display:flex;justify-content:flex-end;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);z-index:1000;
+}
+.nav-items{display:flex;gap:25px;}
+.nav-items a{font-weight:500;transition:0.3s ease;color:#fff;font-size:1rem;display:flex;align-items:center;}
+.nav-items a:hover{color:#ffd700;transform:scale(1.05);}
+.nav-items a i{margin-right:6px;}
+
+/* === HEADER BANNER === */
+.header-banner{
+  background:url('img2.jpg') center/cover no-repeat;
+  padding:120px 20px 80px;
+  text-align:center;
+  position:relative;
+}
+.header-banner::after{
+  content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.25);z-index:0;
+}
+.header-banner h1{
+  position:relative;font-size:3rem;color:#ffd700;font-weight:700;z-index:1;
+  opacity:0; transform:translateY(60px);
+  transition:all 1.2s ease;
+}
+
+/* === ABOUT SECTION === */
+.shaded-section{
+  max-width:1200px;margin:60px auto;padding:60px 50px;background:#f9f9f9;border-radius:25px;display:flex;gap:50px;align-items:center;position:relative;z-index:1;flex-wrap:wrap;
+  opacity:0; transform:translateY(60px); transition:all 1.2s ease;
+}
+.text-content{flex:1 1 60%;min-width:300px;}
+.image-content{flex:1 1 35%;min-width:250px;display:flex;justify-content:flex-end;}
+.image-content img{width:100%;max-width:400px;border-radius:15px;display:block;}
+
+/* === SECTION HEADINGS === */
+h2{font-size:2rem;color:#111;margin-bottom:20px;position:relative;}
+h2::after{content:'';display:block;width:60px;height:3px;background:#ffd700;margin-top:8px;border-radius:2px;}
+p{font-size:1.05rem;line-height:1.7;color:#333;margin-bottom:20px;}
+
+/* === ADVANTAGES & USES CARDS === */
+.cards-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+.card{
+  background:#fff;padding:25px 20px;border-radius:20px;box-shadow:0 6px 15px rgba(0,0,0,0.1);transition:transform 0.5s ease, box-shadow 0.5s ease, opacity 0.8s ease;opacity:0;transform:translateY(60px);
+}
+.card i{
+  font-size:2rem;color:#ffd700;margin-bottom:15px;display:block;
+}
+.card h4{margin-bottom:10px;font-size:1.2rem;color:#111;}
+.card p{color:#555;font-size:0.95rem;line-height:1.5;}
+.card:hover{transform:translateY(-12px);box-shadow:0 20px 40px rgba(255,215,0,0.2);}
+
+/* === PRODUCT RANGE CARDS === */
+.product-range{padding:60px 20px;text-align:center;background:#fff;margin-top:50px;}
+.product-range h2{display:inline-block;padding:0;margin-bottom:40px;}
+.product-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1300px;margin:0 auto;}
+.product-card{
+  flex:0 1 calc((100% - 60px)/4);
+  min-width:140px;max-width:180px;
+  border:1px solid #ddd;text-align:center;padding:12px;color:#111;
+  border-radius:12px;background:#fff;cursor:pointer;
+  transition:transform 0.3s ease,box-shadow 0.3s ease,opacity 0.8s ease;opacity:0;transform:translateY(60px);
+}
+.product-card img{width:100%;height:150px;object-fit:cover;border-radius:8px;margin-bottom:10px;}
+.product-card p{font-weight:600;font-size:14px;color:#111;}
+.product-card:hover{transform:translateY(-8px) scale(1.05);box-shadow:0 12px 25px rgba(255,215,0,0.15);}
+
+/* === FOOTER === */
+.footer{background:#111;color:#ddd;padding:40px 20px;font-size:0.9rem;width:100%;}
+.footer-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;}
+.footer-column{flex:1;min-width:220px;}
+.footer-column h4{color:#ffd700;margin-bottom:15px;font-weight:600;}
+.footer-column a{display:inline-block;color:#ddd;margin-bottom:6px;transition:color 0.3s ease;}
+.footer-column a:hover{color:#ffd700;}
+.footer-column p{margin-bottom:8px;}
+
+/* === RESPONSIVE === */
+@media(max-width:992px){.shaded-section{flex-wrap:wrap;padding:40px 20px;}.image-content{order:-1;justify-content:center;width:100%;}}
+@media(max-width:768px){.navbar{flex-wrap:wrap;justify-content:center;padding:10px 15px;}.nav-items{flex-direction:column;background:rgba(0,0,0,0.95);position:absolute;top:60px;right:0;padding:15px;border-radius:0 0 10px 10px;gap:12px;}}
+@media(max-width:576px){.product-card{flex:0 1 calc((100% - 20px)/2);}}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-items">
+    <a href="index.html"><i class="fas fa-home"></i>Home</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i>About</a>
+    <a href="#"><i class="fas fa-box"></i>Products</a>
+    <a href="#"><i class="fas fa-phone"></i>Contact</a>
+  </div>
+</div>
+
+<!-- HEADER BANNER -->
+<div class="header-banner">
+  <h1 class="reveal">TRANSPARENT BOPP SELF ADHESIVE TAPES</h1>
+</div>
+
+<!-- ABOUT + IMAGE -->
+<div class="shaded-section reveal">
+  <div class="text-content">
+    <h2>About Transparent BOPP Tape</h2>
+    <p>Transparent BOPP Self Adhesive Tapes are versatile packaging solutions crafted from Biaxially Oriented Polypropylene film. With strong adhesive properties and exceptional clarity, they are ideal for securing parcels, protecting surfaces, and maintaining a clean, professional appearance.</p>
+    <p>These tapes offer excellent mechanical strength, resistance to UV light and moisture, and ensure consistent performance across a wide range of surfaces and temperatures.</p>
+  </div>
+  <div class="image-content">
+    <img src="img5.jpg" alt="BOPP Tape">
+  </div>
+</div>
+
+<!-- ADVANTAGES CARDS -->
+<section class="product-range">
+  <h2>Advantages</h2>
+  <div class="cards-container">
+    <div class="card reveal"><i class="fas fa-check-circle"></i><h4>High Strength</h4><p>Resists tearing and ensures safe packaging of goods.</p></div>
+    <div class="card reveal"><i class="fas fa-leaf"></i><h4>Eco Friendly</h4><p>Made from non-toxic, recyclable BOPP material.</p></div>
+    <div class="card reveal"><i class="fas fa-ad"></i><h4>Clear Visibility</h4><p>Transparent surface keeps your branding visible.</p></div>
+    <div class="card reveal"><i class="fas fa-dollar-sign"></i><h4>Cost Effective</h4><p>Optimal for bulk packaging operations.</p></div>
+  </div>
+</section>
+
+<!-- USES CARDS -->
+<section class="product-range">
+  <h2>Uses</h2>
+  <div class="cards-container">
+    <div class="card reveal"><i class="fas fa-box"></i><h4>Box Sealing</h4><p>Secure parcels for shipping and storage.</p></div>
+    <div class="card reveal"><i class="fas fa-plane"></i><h4>Export Packaging</h4><p>Ideal for export-quality packaging.</p></div>
+    <div class="card reveal"><i class="fas fa-file-alt"></i><h4>Document Lamination</h4><p>Protect important documents professionally.</p></div>
+    <div class="card reveal"><i class="fas fa-shopping-cart"></i><h4>E-commerce</h4><p>Safe and reliable for online order parcels.</p></div>
+  </div>
+</section>
+
+<!-- PRODUCT RANGE -->
+<section class="product-range">
+  <h2>Our Product Range</h2>
+  <div class="product-grid">
+    <a href="bopp1.html" class="product-card reveal"><img src="img5.jpg"><p>Transparent BOPP Self-Adhesive Tapes</p></a>
+    <a href="brown.html" class="product-card reveal"><img src="brown.img.jpg"><p>Brown BOPP Self-Adhesive Tapes</p></a>
+    <a href="color.html" class="product-card reveal"><img src="color.img.jpg"><p>Color BOPP Self-Adhesive Tapes</p></a>
+    <a href="masking.html" class="product-card reveal"><img src="img4.jpg"><p>Masking Tapes</p></a>
+    <a href="stretch.html" class="product-card reveal"><img src="img6.jpg"><p>Stretch Films</p></a>
+    <a href="foam.html" class="product-card reveal"><img src="foamhead.jpg"><p>EPE Foam Rolls</p></a>
+    <a href="esd.html" class="product-card reveal"><img src="esdbg.jpg"><p>ESD Bubble Pouches</p></a>
+    <a href="bio.html" class="product-card reveal"><img src="IMG-20250524-WA0051.jpg"><p>Biodegradable Bags</p></a>
+    <a href="#" class="product-card reveal"><img src="img9.jpg"><p>Product 9</p></a>
+    <a href="#" class="product-card reveal"><img src="img10.jpg"><p>Product 10</p></a>
+    <a href="#" class="product-card reveal"><img src="img11.jpg"><p>Product 11</p></a>
+    <a href="#" class="product-card reveal"><img src="img12.jpg"><p>Product 12</p></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p>Email: rajankoul@nkbpackaging.com</p>
+      <p>Phone: +91 9971282775, +91 9560058646</p>
+      <p>Address: Plot no-2, Anand Industrial Estate, Arthala, Mohan Nagar, Ghaziabad, Uttar Pradesh, India 201007</p>
+    </div>
+    <div class="footer-column">
+      <h4>Our Products</h4>
+      <a href="transparent-bopp.html">Transparent Bopp self-adhesive tape</a><br>
+      <a href="#">Brown Bopp self-adhesive tape</a><br>
+      <a href="#">Masking tape</a><br>
+      <a href="#">Stretch Film</a><br>
+      <a href="#">Bubble roll</a>
+    </div>
+    <div class="footer-column">
+      <h4>About Us</h4>
+      <p>NKB Packaging Solutions provides premium packaging materials with unmatched quality and service.</p>
+      <p>We combine experience and innovation to meet your packaging needs.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// === SCROLL ANIMATIONS FOR ALL REVEAL ELEMENTS ===
+const revealEls = document.querySelectorAll('.reveal');
+const revealOnScroll = () => {
+  revealEls.forEach((el, i) => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 10){
+      setTimeout(()=>{
+        el.style.opacity = 1;
+        el.style.transform = 'translateY(0)';
+      }, i*30); // stagger delay
+    }
+  });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+</body>
+</html>

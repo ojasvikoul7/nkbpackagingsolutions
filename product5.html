@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stretch Film | NKB Packaging Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#fff;color:#111;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+
+/* ================= NAVBAR ================= */
+.navbar{
+  position:fixed;top:0;left:0;width:100%;
+  padding:15px 40px;
+  display:flex;justify-content:flex-end;
+  background:rgba(10,10,10,0.95);
+  backdrop-filter:blur(8px);
+  z-index:1000;
+}
+.nav-items{display:flex;gap:25px;}
+.nav-items a{
+  color:#fff;font-weight:500;
+  display:flex;align-items:center;
+  transition:.3s;
+}
+.nav-items a:hover{color:#6dd5fa;transform:scale(1.05);}
+.nav-items a i{margin-right:6px;}
+
+/* ================= HEADER ================= */
+.header-banner{
+  background:url('stretch-banner.jpg') center/cover no-repeat;
+  padding:150px 20px 110px;
+  text-align:center;
+  position:relative;
+}
+.header-banner::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(120deg,rgba(0,0,0,0.7),rgba(0,0,0,0.25));
+}
+.header-banner h1{
+  position:relative;
+  font-size:3.1rem;
+  color:#ffffff;
+  font-weight:700;
+  z-index:1;
+  opacity:0;
+  transform:translateY(60px);
+  transition:1.2s ease;
+}
+
+/* ================= ABOUT ================= */
+.shaded-section{
+  max-width:1200px;
+  margin:75px auto;
+  padding:65px 60px;
+  background:#f4f8fb;
+  border-radius:32px;
+  display:flex;
+  gap:60px;
+  align-items:center;
+  flex-wrap:wrap;
+  opacity:0;
+  transform:translateY(60px);
+  transition:1.2s ease;
+}
+.text-content{flex:1 1 60%;min-width:280px;}
+.image-content{flex:1 1 35%;display:flex;justify-content:flex-end;}
+.image-content img{
+  width:100%;
+  max-width:420px;
+  border-radius:24px;
+}
+
+/* ================= TITLES ================= */
+h2{
+  font-size:2.2rem;
+  margin-bottom:22px;
+  color:#1b1b1b;
+}
+h2::after{
+  content:'';
+  width:65px;
+  height:3px;
+  background:#6dd5fa;
+  display:block;
+  margin-top:8px;
+}
+p{line-height:1.85;color:#333;margin-bottom:18px;}
+
+/* ================= CARDS ================= */
+.cards-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:32px;
+  margin-top:35px;
+}
+.card{
+  background:#fff;
+  padding:30px 26px;
+  border-radius:28px;
+  border:1px solid rgba(0,0,0,0.08);
+  opacity:0;
+  transform:translateY(60px);
+  transition:.5s ease;
+}
+.card i{
+  font-size:2.2rem;
+  color:#6dd5fa;
+  margin-bottom:15px;
+}
+.card h4{margin-bottom:10px;color:#222;}
+.card:hover{
+  transform:translateY(-15px);
+  box-shadow:0 28px 60px rgba(0,0,0,0.22);
+}
+
+/* ================= PRODUCT RANGE ================= */
+.product-range{
+  padding:80px 20px;
+  background:#fff;
+  text-align:center;
+}
+.product-range h2{margin-bottom:45px;}
+
+.product-grid{
+  max-width:1300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:32px;
+}
+
+.product-card{
+  background:#fff;
+  border-radius:26px;
+  padding:20px;
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,0.08);
+  text-align:center;
+  opacity:0;
+  transform:translateY(60px);
+  transition:.45s ease;
+}
+
+.product-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,
+    rgba(109,213,250,0.35),
+    rgba(179,229,252,0.25));
+  opacity:0;
+  transition:.4s;
+}
+
+.product-card img{
+  width:100%;
+  height:165px;
+  object-fit:cover;
+  border-radius:18px;
+  margin-bottom:15px;
+  position:relative;
+  z-index:2;
+}
+
+.product-card p{
+  font-weight:600;
+  color:#222;
+  position:relative;
+  z-index:2;
+}
+
+.product-card:hover{
+  transform:translateY(-14px) scale(1.04);
+  box-shadow:0 32px 70px rgba(0,0,0,0.28);
+}
+.product-card:hover::before{opacity:1;}
+
+/* ================= FOOTER ================= */
+.footer{
+  background:#111;
+  color:#ddd;
+  padding:55px 20px 20px;
+}
+.footer-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:35px;
+}
+.footer-column{flex:1;min-width:230px;}
+.footer-column h4{
+  color:#6dd5fa;
+  margin-bottom:18px;
+}
+.footer-column h4::after{
+  content:'';
+  width:45px;
+  height:3px;
+  background:#6dd5fa;
+  display:block;
+  margin-top:8px;
+}
+.footer-column p{
+  font-size:.92rem;
+  margin-bottom:10px;
+  line-height:1.6;
+}
+.footer-column a{
+  display:block;
+  margin-bottom:8px;
+  transition:.3s;
+}
+.footer-column a:hover{
+  color:#6dd5fa;
+  transform:translateX(5px);
+}
+.footer-bottom{
+  text-align:center;
+  margin-top:25px;
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:15px;
+  font-size:.85rem;
+  color:#aaa;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:992px){
+  .shaded-section{padding:40px 25px;}
+  .image-content{order:-1;justify-content:center;}
+}
+@media(max-width:576px){
+  .product-grid{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-items">
+    <a href="index.html"><i class="fas fa-home"></i>Home</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i>About</a>
+    <a href="#"><i class="fas fa-box"></i>Products</a>
+    <a href="#"><i class="fas fa-phone"></i>Contact</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="header-banner">
+  <h1 class="reveal">STRETCH FILMS</h1>
+</div>
+
+<!-- ABOUT -->
+<div class="shaded-section reveal">
+  <div class="text-content">
+    <h2>About Stretch Film</h2>
+    <p>Stretch films are highly stretchable plastic films used to wrap and secure palletized goods during transportation and storage.</p>
+    <p>They provide excellent load stability, moisture protection and cost-effective packaging for industrial and warehouse operations.</p>
+  </div>
+  <div class="image-content">
+    <img src="stretch.jpg">
+  </div>
+</div>
+
+<!-- ADVANTAGES -->
+<section class="product-range">
+  <h2>Advantages</h2>
+  <div class="cards-container">
+    <div class="card reveal"><i class="fas fa-layer-group"></i><h4>High Load Stability</h4><p>Prevents shifting during transit.</p></div>
+    <div class="card reveal"><i class="fas fa-water"></i><h4>Moisture Protection</h4><p>Protects goods from dust and water.</p></div>
+    <div class="card reveal"><i class="fas fa-expand-arrows-alt"></i><h4>Excellent Stretchability</h4><p>Strong elastic memory.</p></div>
+    <div class="card reveal"><i class="fas fa-warehouse"></i><h4>Warehouse Friendly</h4><p>Ideal for pallet wrapping.</p></div>
+  </div>
+</section>
+
+<!-- USES -->
+<section class="product-range">
+  <h2>Uses</h2>
+  <div class="cards-container">
+    <div class="card reveal"><i class="fas fa-boxes"></i><h4>Pallet Wrapping</h4><p>Secures bulk shipments.</p></div>
+    <div class="card reveal"><i class="fas fa-truck"></i><h4>Transportation</h4><p>Safe logistics movement.</p></div>
+    <div class="card reveal"><i class="fas fa-industry"></i><h4>Industrial Storage</h4><p>Long-term protection.</p></div>
+    <div class="card reveal"><i class="fas fa-store"></i><h4>Warehousing</h4><p>Efficient stock handling.</p></div>
+  </div>
+</section>
+
+<!-- PRODUCT RANGE -->
+<section class="product-range">
+  <h2>Our Product Range</h2>
+  <div class="product-grid">
+    <a href="transparent-bopp.html" class="product-card reveal"><img src="img5.jpg"><p>Transparent BOPP Tape</p></a>
+    <a href="brown.html" class="product-card reveal"><img src="brown.img.jpg"><p>Brown BOPP Tape</p></a>
+    <a href="color.html" class="product-card reveal"><img src="color.img.jpg"><p>Color BOPP Tape</p></a>
+    <a href="masking.html" class="product-card reveal"><img src="masking.jpg"><p>Masking Tape</p></a>
+    <a href="stretch.html" class="product-card reveal"><img src="stretch.jpg"><p>Stretch Film</p></a>
+    <a href="foam.html" class="product-card reveal"><img src="foamhead.jpg"><p>EPE Foam Rolls</p></a>
+    <a href="esd.html" class="product-card reveal"><img src="esdbg.jpg"><p>ESD Bubble Pouches</p></a>
+    <a href="bio.html" class="product-card reveal"><img src="IMG-20250524-WA0051.jpg"><p>Biodegradable Bags</p></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p>Email: rajankoul@nkbpackaging.com</p>
+      <p>Phone: +91 9971282775</p>
+      <p>Phone: +91 9560058646</p>
+      <p>Plot no-2, Anand Industrial Estate, Arthala, Mohan Nagar, Ghaziabad, UP – 201007</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Our Products</h4>
+      <a href="#">Transparent BOPP Tape</a>
+      <a href="#">Brown BOPP Tape</a>
+      <a href="#">Color BOPP Tape</a>
+      <a href="#">Masking Tape</a>
+      <a href="#">Stretch Film</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>About Us</h4>
+      <p>NKB Packaging Solutions supplies high-performance packaging materials trusted by manufacturers and logistics partners nationwide.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 NKB Packaging Solutions. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+const revealEls=document.querySelectorAll('.reveal');
+const revealOnScroll=()=>{
+  revealEls.forEach((el,i)=>{
+    const top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-10){
+      setTimeout(()=>{
+        el.style.opacity=1;
+        el.style.transform='translateY(0)';
+      },i*30);
+    }
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+window.addEventListener('load',revealOnScroll);
+</script>
+
+</body>
+</html>
+

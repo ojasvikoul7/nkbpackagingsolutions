@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masking Tape | NKB Packaging Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#fff;color:#111;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+
+/* ================= NAVBAR ================= */
+.navbar{
+  position:fixed;top:0;left:0;width:100%;
+  padding:15px 40px;
+  display:flex;justify-content:flex-end;
+  background:rgba(20,20,20,0.92);
+  backdrop-filter:blur(8px);
+  z-index:1000;
+}
+.nav-items{display:flex;gap:25px;}
+.nav-items a{
+  color:#fff;font-weight:500;
+  display:flex;align-items:center;
+  transition:.3s;
+}
+.nav-items a:hover{color:#e6c88a;transform:scale(1.05);}
+.nav-items a i{margin-right:6px;}
+
+/* ================= HEADER ================= */
+.header-banner{
+  background:url('masking-banner.jpg') center/cover no-repeat;
+  padding:140px 20px 100px;
+  text-align:center;
+  position:relative;
+}
+.header-banner::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(120deg,rgba(0,0,0,0.55),rgba(0,0,0,0.15));
+}
+.header-banner h1{
+  position:relative;
+  font-size:3rem;
+  color:#fff;
+  font-weight:700;
+  z-index:1;
+  opacity:0;transform:translateY(60px);
+  transition:1.2s ease;
+}
+
+/* ================= ABOUT ================= */
+.shaded-section{
+  max-width:1200px;margin:70px auto;
+  padding:60px 55px;
+  background:#faf7f0;
+  border-radius:30px;
+  display:flex;gap:55px;
+  align-items:center;flex-wrap:wrap;
+  opacity:0;transform:translateY(60px);
+  transition:1.2s ease;
+}
+.text-content{flex:1 1 60%;min-width:280px;}
+.image-content{flex:1 1 35%;display:flex;justify-content:flex-end;}
+.image-content img{
+  width:100%;max-width:380px;
+  border-radius:22px;
+}
+
+/* ================= TITLES ================= */
+h2{
+  font-size:2.1rem;
+  color:#222;
+  margin-bottom:22px;
+}
+h2::after{
+  content:'';
+  width:60px;height:3px;
+  background:#d6b36a;
+  display:block;margin-top:8px;
+}
+p{line-height:1.8;color:#333;margin-bottom:18px;}
+
+/* ================= CARDS ================= */
+.cards-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;margin-top:35px;
+}
+.card{
+  background:#fff;
+  padding:28px 24px;
+  border-radius:26px;
+  border:1px solid #eee;
+  opacity:0;transform:translateY(60px);
+  transition:.5s ease;
+}
+.card i{
+  font-size:2.1rem;
+  color:#d6b36a;
+  margin-bottom:15px;
+}
+.card h4{margin-bottom:10px;color:#222;}
+.card:hover{
+  transform:translateY(-14px);
+  box-shadow:0 25px 55px rgba(0,0,0,0.15);
+}
+
+/* ================= PRODUCT RANGE ================= */
+.product-range{
+  padding:70px 20px;
+  background:#fff;
+  text-align:center;
+}
+.product-range h2{margin-bottom:45px;}
+
+.product-grid{
+  max-width:1300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:30px;
+}
+
+.product-card{
+  background:#ffffff;
+  border-radius:22px;
+  padding:18px;
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,0.08);
+  text-align:center;
+  opacity:0;transform:translateY(60px);
+  transition:.45s ease;
+}
+
+.product-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,
+    rgba(214,179,106,0.25),
+    rgba(240,224,180,0.25));
+  opacity:0;
+  transition:.4s;
+}
+
+.product-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:16px;
+  margin-bottom:15px;
+  position:relative;
+  z-index:2;
+}
+
+.product-card p{
+  font-weight:600;
+  color:#222;
+  position:relative;
+  z-index:2;
+}
+
+.product-card:hover{
+  transform:translateY(-12px) scale(1.03);
+  box-shadow:0 30px 60px rgba(0,0,0,0.25);
+}
+.product-card:hover::before{opacity:1;}
+
+/* ================= FOOTER ================= */
+.footer{
+  background:#111;
+  color:#ddd;
+  padding:55px 20px 20px;
+}
+.footer-container{
+  max-width:1200px;margin:auto;
+  display:flex;flex-wrap:wrap;
+  justify-content:space-between;gap:35px;
+}
+.footer-column{flex:1;min-width:230px;}
+.footer-column h4{
+  color:#e6c88a;margin-bottom:18px;
+}
+.footer-column h4::after{
+  content:'';width:45px;height:3px;
+  background:#e6c88a;display:block;margin-top:8px;
+}
+.footer-column p{font-size:.92rem;margin-bottom:10px;line-height:1.6;}
+.footer-column a{display:block;margin-bottom:8px;transition:.3s;}
+.footer-column a:hover{color:#e6c88a;transform:translateX(5px);}
+.footer-bottom{
+  text-align:center;margin-top:25px;
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:15px;font-size:.85rem;color:#aaa;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:992px){
+  .shaded-section{padding:40px 25px;}
+  .image-content{order:-1;justify-content:center;}
+}
+@media(max-width:576px){
+  .product-grid{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-items">
+    <a href="index.html"><i class="fas fa-home"></i>Home</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i>About</a>
+    <a href="#"><i class="fas fa-box"></i>Products</a>
+    <a href="#"><i class="fas fa-phone"></i>Contact</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="header-banner">
+  <h1 class="reveal">MASKING TAPES</h1>
+</div>
+
+<!-- ABOUT -->
+<div class="shaded-section reveal">
+  <div class="text-content">
+    <h2>About Masking Tape</h2>
+    <p>Masking tapes are pressure-sensitive tapes made for temporary surface protection during painting, polishing and finishing processes.</p>
+    <p>They ensure clean paint edges, easy removal and residue-free performance across multiple applications.</p>
+  </div>
+  <div class="image-content">
+    <img src="masking.jpg">
+  </div>
+</div>
+
+<!-- ADVANTAGES -->
+<section class="product-range">
+  <h2>Advantages</h2>
+  <div class="cards-container">
+    <div class="card reveal"><i class="fas fa-paint-roller"></i><h4>Clean Removal</h4><p>No residue after use.</p></div>
+    <div class="card reveal"><i class="fas fa-border-style"></i><h4>Sharp Paint Lines</h4><p>Perfect surface finish.</p></div>
+    <div class="card reveal"><i class="fas fa-shield-alt"></i><h4>Surface Protection</h4><p>Prevents paint damage.</p></div>
+    <div class="card reveal"><i class="fas fa-clock"></i><h4>Easy Application</h4><p>Quick stick & remove.</p></div>
+  </div>
+</section>
+
+<!-- USES -->
+<section class="product-range">
+  <h2>Uses</h2>
+  <div class="cards-container">
+    <div class="card reveal"><i class="fas fa-paint-brush"></i><h4>Painting</h4><p>Interior & exterior masking.</p></div>
+    <div class="card reveal"><i class="fas fa-car"></i><h4>Automobile</h4><p>Surface safety during painting.</p></div>
+    <div class="card reveal"><i class="fas fa-tools"></i><h4>Industrial Work</h4><p>Temporary surface protection.</p></div>
+    <div class="card reveal"><i class="fas fa-home"></i><h4>Home Improvement</h4><p>DIY projects & repairs.</p></div>
+  </div>
+</section>
+
+<!-- PRODUCT RANGE -->
+<section class="product-range">
+  <h2>Our Product Range</h2>
+  <div class="product-grid">
+    <a href="transparent-bopp.html" class="product-card reveal"><img src="img5.jpg"><p>Transparent BOPP Tape</p></a>
+    <a href="brown.html" class="product-card reveal"><img src="brown.img.jpg"><p>Brown BOPP Tape</p></a>
+    <a href="color.html" class="product-card reveal"><img src="color.img.jpg"><p>Color BOPP Tape</p></a>
+    <a href="masking.html" class="product-card reveal"><img src="masking.jpg"><p>Masking Tape</p></a>
+    <a href="stretch.html" class="product-card reveal"><img src="img6.jpg"><p>Stretch Films</p></a>
+    <a href="foam.html" class="product-card reveal"><img src="foamhead.jpg"><p>EPE Foam Rolls</p></a>
+    <a href="esd.html" class="product-card reveal"><img src="esdbg.jpg"><p>ESD Bubble Pouches</p></a>
+    <a href="bio.html" class="product-card reveal"><img src="IMG-20250524-WA0051.jpg"><p>Biodegradable Bags</p></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p>Email: rajankoul@nkbpackaging.com</p>
+      <p>Phone: +91 9971282775</p>
+      <p>Phone: +91 9560058646</p>
+      <p>Plot no-2, Anand Industrial Estate, Arthala, Mohan Nagar, Ghaziabad, UP – 201007</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Our Products</h4>
+      <a href="#">Transparent BOPP Tape</a>
+      <a href="#">Brown BOPP Tape</a>
+      <a href="#">Color BOPP Tape</a>
+      <a href="#">Masking Tape</a>
+      <a href="#">Stretch Film</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>About Us</h4>
+      <p>NKB Packaging Solutions delivers premium packaging materials trusted across industries for quality, strength and consistency.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 NKB Packaging Solutions. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+const revealEls=document.querySelectorAll('.reveal');
+const revealOnScroll=()=>{
+  revealEls.forEach((el,i)=>{
+    const top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-10){
+      setTimeout(()=>{
+        el.style.opacity=1;
+        el.style.transform='translateY(0)';
+      },i*30);
+    }
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+window.addEventListener('load',revealOnScroll);
+</script>
+
+</body>
+</html>
